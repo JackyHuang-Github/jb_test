@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="51e5d5fef6ce46aeaa6fc582093d3ace" Name="Diagram1">
+      <Diagram DiagramId="51e5d5fef6ce46aeaa6fc582093d3ace" Name="Diagram1" ZoomLevel="73">
         <EntityTypeShape EntityType="nicedemoModel.AboutUs" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="nicedemoModel.AboutUsDetails" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="nicedemoModel.AddressBooks" Width="1.5" PointX="0.75" PointY="3.75" />
@@ -64,6 +64,7 @@
         <EntityTypeShape EntityType="nicedemoModel.WorkflowRoles" Width="1.5" PointX="14.75" PointY="21.75" />
         <EntityTypeShape EntityType="nicedemoModel.WorkflowRoleUsers" Width="1.5" PointX="20.75" PointY="21.75" />
         <EntityTypeShape EntityType="nicedemoModel.WorkflowRoutes" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="nicedemoModel.iepb00h" Width="1.5" PointX="11.375" PointY="22.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

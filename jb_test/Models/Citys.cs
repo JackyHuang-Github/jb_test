@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace jb_test.Models
 {
+    using System;
+    using System.Collections.Generic;
+    
     public partial class Citys
     {
         public int Id { get; set; }
         public string SortNo { get; set; }
         public string CityName { get; set; }
         public string Remark { get; set; }
+        public Nullable<decimal> Latitude { get; set; }
+        public Nullable<decimal> Longitude { get; set; }
     }
 }

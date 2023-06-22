@@ -150,6 +150,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CityName" Type="nvarchar" MaxLength="50" />
     <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="15" />
     <Property Name="Remark" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Citys">
@@ -159,6 +161,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SortNo" Type="nvarchar" MaxLength="50" />
     <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="decimal" Precision="18" Scale="15" />
+    <Property Name="Longitude" Type="decimal" Precision="18" Scale="15" />
     <Property Name="Remark" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Clients">
@@ -324,6 +328,33 @@
     <Property Name="SubjectContent" Type="nvarchar(max)" />
     <Property Name="Remark" Type="nvarchar" MaxLength="250" />
     <Property Name="GuidNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="iepb00h">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="od_id" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="od_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="od_name1" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="od_rate" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+    <Property Name="od_rate1" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+    <Property Name="od_rate2" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+    <Property Name="od_rate3" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+    <Property Name="od_ymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ie_def" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="ie_ymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ie_time" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="ie_user" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ie_lymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ie_ltime" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="ie_luser" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ie_cymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ie_ctime" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="ie_cuser" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ie_cancel" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="od_cu" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="od_id1" Type="nvarchar" MaxLength="3" Nullable="false" />
   </EntityType>
   <EntityType Name="Languages">
     <Key>
@@ -760,6 +791,7 @@
     <Property Name="ContactTel" Type="nvarchar" MaxLength="50" />
     <Property Name="ContactAddress" Type="nvarchar" MaxLength="250" />
     <Property Name="ValidateCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="NotifyPassword" Type="nvarchar" MaxLength="50" />
     <Property Name="Remark" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Vacations">
@@ -873,6 +905,7 @@
     <EntitySet Name="Featureds" EntityType="Self.Featureds" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ForumBoards" EntityType="Self.ForumBoards" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Forums" EntityType="Self.Forums" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iepb00h" EntityType="Self.iepb00h" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MapPositions" EntityType="Self.MapPositions" Schema="dbo" store:Type="Tables" />

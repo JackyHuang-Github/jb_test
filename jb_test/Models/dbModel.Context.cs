@@ -7,24 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
 namespace jb_test.Models
 {
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    
     public partial class dbEntities : DbContext
     {
         public dbEntities()
             : base("name=dbEntities")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<AboutUs> AboutUs { get; set; }
         public virtual DbSet<AboutUsDetails> AboutUsDetails { get; set; }
         public virtual DbSet<AddressBooks> AddressBooks { get; set; }
@@ -84,5 +84,6 @@ namespace jb_test.Models
         public virtual DbSet<WorkflowRoles> WorkflowRoles { get; set; }
         public virtual DbSet<WorkflowRoleUsers> WorkflowRoleUsers { get; set; }
         public virtual DbSet<WorkflowRoutes> WorkflowRoutes { get; set; }
+        public virtual DbSet<iepb00h> iepb00h { get; set; }
     }
 }

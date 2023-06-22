@@ -1,7 +1,7 @@
 SELECT *
 FROM Programs
 WHERE 1 = 1
---AND PrgNo = 'MBASP006'
+AND PrgNo = 'MBASP006'
 ORDER BY RoleNo, ModuleNo, SortNo
 
 /*

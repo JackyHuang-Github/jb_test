@@ -1,0 +1,154 @@
+@model IEnumerable<jb_test.Models.iepb00h>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="overflow-scroll">
+    @Html.Partial("~/Views/PartialViews/_PartialFormHeader.cshtml")
+    <table class="table table-bordered">
+        <tr class="table-secondary">
+            <th>
+              @Html.Partial("~/Views/PartialViews/_PartialFormCreate.cshtml")
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_id)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_name)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_name1)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_rate)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_rate1)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_rate2)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_rate3)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_ymd)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_def)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_ymd)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_time)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_user)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_lymd)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_ltime)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_luser)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_cymd)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_ctime)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_cuser)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.ie_cancel)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_cu)
+            </th>
+            <th>
+              @Html.DisplayNameFor(model => model.od_id1)
+            </th>
+        </tr>
+
+    @foreach(var item in Model)
+    {
+        ActionService.RowId = item.Id;
+        ActionService.RowData = (item.od_id == null) ? "" : $"{item.od_id} ";
+        <tr>
+            <td>
+                @Html.Partial("~/Views/PartialViews/_PartialFormEdit.cshtml")
+                @Html.Partial("~/Views/PartialViews/_PartialFormDelete.cshtml")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_name1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_rate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_rate1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_rate2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_rate3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_ymd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_def)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_ymd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_user)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_lymd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_ltime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_luser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_cymd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_ctime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_cuser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ie_cancel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.od_cu)
+            </td>
+            <td  class="table-wrap">
+                @Html.DisplayFor(modelItem => item.od_id1)
+            </td>
+        </tr>
+    }
+    </table>
+</div>

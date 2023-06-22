@@ -155,6 +155,8 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CityName" Type="nvarchar" MaxLength="50" />
           <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="decimal" Precision="18" Scale="15" />
+          <Property Name="Longitude" Type="decimal" Precision="18" Scale="15" />
           <Property Name="Remark" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Citys">
@@ -164,6 +166,8 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SortNo" Type="nvarchar" MaxLength="50" />
           <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="decimal" Precision="18" Scale="15" />
+          <Property Name="Longitude" Type="decimal" Precision="18" Scale="15" />
           <Property Name="Remark" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Clients">
@@ -329,6 +333,33 @@
           <Property Name="SubjectContent" Type="nvarchar(max)" />
           <Property Name="Remark" Type="nvarchar" MaxLength="250" />
           <Property Name="GuidNo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="iepb00h">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="od_id" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="od_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="od_name1" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="od_rate" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+          <Property Name="od_rate1" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+          <Property Name="od_rate2" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+          <Property Name="od_rate3" Type="decimal" Precision="24" Scale="8" Nullable="false" />
+          <Property Name="od_ymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ie_def" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="ie_ymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ie_time" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ie_user" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ie_lymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ie_ltime" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ie_luser" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ie_cymd" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ie_ctime" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ie_cuser" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ie_cancel" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="od_cu" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="od_id1" Type="nvarchar" MaxLength="3" Nullable="false" />
         </EntityType>
         <EntityType Name="Languages">
           <Key>
@@ -765,6 +796,7 @@
           <Property Name="ContactTel" Type="nvarchar" MaxLength="50" />
           <Property Name="ContactAddress" Type="nvarchar" MaxLength="250" />
           <Property Name="ValidateCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="NotifyPassword" Type="nvarchar" MaxLength="50" />
           <Property Name="Remark" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Vacations">
@@ -878,6 +910,7 @@
           <EntitySet Name="Featureds" EntityType="Self.Featureds" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ForumBoards" EntityType="Self.ForumBoards" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Forums" EntityType="Self.Forums" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iepb00h" EntityType="Self.iepb00h" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MapPositions" EntityType="Self.MapPositions" Schema="dbo" store:Type="Tables" />
@@ -981,6 +1014,7 @@
           <EntitySet Name="WorkflowRoles" EntityType="nicedemoModel.WorkflowRoles" />
           <EntitySet Name="WorkflowRoleUsers" EntityType="nicedemoModel.WorkflowRoleUsers" />
           <EntitySet Name="WorkflowRoutes" EntityType="nicedemoModel.WorkflowRoutes" />
+          <EntitySet Name="iepb00h" EntityType="nicedemoModel.iepb00h" />
         </EntityContainer>
         <EntityType Name="AboutUs">
           <Key>
@@ -1133,6 +1167,8 @@
           <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="Decimal" Precision="18" Scale="15" />
+          <Property Name="Longitude" Type="Decimal" Precision="18" Scale="15" />
         </EntityType>
         <EntityType Name="Citys">
           <Key>
@@ -1142,6 +1178,8 @@
           <Property Name="SortNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="Decimal" Precision="18" Scale="15" />
+          <Property Name="Longitude" Type="Decimal" Precision="18" Scale="15" />
         </EntityType>
         <EntityType Name="Clients">
           <Key>
@@ -1743,6 +1781,7 @@
           <Property Name="ContactAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ValidateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NotifyPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Vacations">
           <Key>
@@ -1832,6 +1871,33 @@
           <Property Name="RoleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="iepb00h">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="od_id" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="od_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="od_name1" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="od_rate" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+          <Property Name="od_rate1" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+          <Property Name="od_rate2" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+          <Property Name="od_rate3" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+          <Property Name="od_ymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ie_def" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ie_ymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ie_time" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ie_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ie_lymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ie_ltime" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ie_luser" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ie_cymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ie_ctime" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ie_cuser" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ie_cancel" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="od_cu" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="od_id1" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1993,6 +2059,8 @@
           <EntitySetMapping Name="CityAreas">
             <EntityTypeMapping TypeName="nicedemoModel.CityAreas">
               <MappingFragment StoreEntitySet="CityAreas">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="AreaName" ColumnName="AreaName" />
                 <ScalarProperty Name="CityName" ColumnName="CityName" />
@@ -2003,6 +2071,8 @@
           <EntitySetMapping Name="Citys">
             <EntityTypeMapping TypeName="nicedemoModel.Citys">
               <MappingFragment StoreEntitySet="Citys">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="CityName" ColumnName="CityName" />
                 <ScalarProperty Name="SortNo" ColumnName="SortNo" />
@@ -2633,6 +2703,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="nicedemoModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="NotifyPassword" ColumnName="NotifyPassword" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="ValidateCode" ColumnName="ValidateCode" />
                 <ScalarProperty Name="ContactAddress" ColumnName="ContactAddress" />
@@ -2745,6 +2816,34 @@
                 <ScalarProperty Name="RoleNo" ColumnName="RoleNo" />
                 <ScalarProperty Name="RouteOrder" ColumnName="RouteOrder" />
                 <ScalarProperty Name="PrgNo" ColumnName="PrgNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iepb00h">
+            <EntityTypeMapping TypeName="nicedemoModel.iepb00h">
+              <MappingFragment StoreEntitySet="iepb00h">
+                <ScalarProperty Name="od_id1" ColumnName="od_id1" />
+                <ScalarProperty Name="od_cu" ColumnName="od_cu" />
+                <ScalarProperty Name="ie_cancel" ColumnName="ie_cancel" />
+                <ScalarProperty Name="ie_cuser" ColumnName="ie_cuser" />
+                <ScalarProperty Name="ie_ctime" ColumnName="ie_ctime" />
+                <ScalarProperty Name="ie_cymd" ColumnName="ie_cymd" />
+                <ScalarProperty Name="ie_luser" ColumnName="ie_luser" />
+                <ScalarProperty Name="ie_ltime" ColumnName="ie_ltime" />
+                <ScalarProperty Name="ie_lymd" ColumnName="ie_lymd" />
+                <ScalarProperty Name="ie_user" ColumnName="ie_user" />
+                <ScalarProperty Name="ie_time" ColumnName="ie_time" />
+                <ScalarProperty Name="ie_ymd" ColumnName="ie_ymd" />
+                <ScalarProperty Name="ie_def" ColumnName="ie_def" />
+                <ScalarProperty Name="od_ymd" ColumnName="od_ymd" />
+                <ScalarProperty Name="od_rate3" ColumnName="od_rate3" />
+                <ScalarProperty Name="od_rate2" ColumnName="od_rate2" />
+                <ScalarProperty Name="od_rate1" ColumnName="od_rate1" />
+                <ScalarProperty Name="od_rate" ColumnName="od_rate" />
+                <ScalarProperty Name="od_name1" ColumnName="od_name1" />
+                <ScalarProperty Name="od_name" ColumnName="od_name" />
+                <ScalarProperty Name="od_id" ColumnName="od_id" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

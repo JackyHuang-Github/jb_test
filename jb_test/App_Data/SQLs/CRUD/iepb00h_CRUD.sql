@@ -1,0 +1,10 @@
+USE [ORANGE1]
+
+SELECT *
+FROM iepb00h
+
+/*
+
+DROP TABLE iepb00h
+
+*/

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace jb_test.Models
 {
+    using System;
+    using System.Collections.Generic;
+    
     public partial class Users
     {
         public int Id { get; set; }
@@ -32,5 +32,6 @@ namespace jb_test.Models
         public string ContactAddress { get; set; }
         public string ValidateCode { get; set; }
         public string Remark { get; set; }
+        public string NotifyPassword { get; set; }
     }
 }

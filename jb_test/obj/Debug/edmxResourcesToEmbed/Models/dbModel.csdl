@@ -60,6 +60,7 @@
     <EntitySet Name="WorkflowRoles" EntityType="nicedemoModel.WorkflowRoles" />
     <EntitySet Name="WorkflowRoleUsers" EntityType="nicedemoModel.WorkflowRoleUsers" />
     <EntitySet Name="WorkflowRoutes" EntityType="nicedemoModel.WorkflowRoutes" />
+    <EntitySet Name="iepb00h" EntityType="nicedemoModel.iepb00h" />
   </EntityContainer>
   <EntityType Name="AboutUs">
     <Key>
@@ -212,6 +213,8 @@
     <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="15" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="15" />
   </EntityType>
   <EntityType Name="Citys">
     <Key>
@@ -221,6 +224,8 @@
     <Property Name="SortNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="18" Scale="15" />
+    <Property Name="Longitude" Type="Decimal" Precision="18" Scale="15" />
   </EntityType>
   <EntityType Name="Clients">
     <Key>
@@ -822,6 +827,7 @@
     <Property Name="ContactAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="ValidateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NotifyPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Vacations">
     <Key>
@@ -911,5 +917,32 @@
     <Property Name="RoleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="iepb00h">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="od_id" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="od_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="od_name1" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="od_rate" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+    <Property Name="od_rate1" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+    <Property Name="od_rate2" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+    <Property Name="od_rate3" Type="Decimal" Nullable="false" Precision="24" Scale="8" />
+    <Property Name="od_ymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ie_def" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ie_ymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ie_time" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ie_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ie_lymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ie_ltime" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ie_luser" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ie_cymd" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ie_ctime" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ie_cuser" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ie_cancel" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="od_cu" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="od_id1" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
