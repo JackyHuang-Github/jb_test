@@ -133,7 +133,9 @@ LEFT OUTER JOIN Roles ON Programs.RoleNo = Roles.RoleNo
     /// <returns></returns>
     private string GetSQLOrderBy()
     {
-        return " ORDER BY  Programs.RoleNo, Programs.SortNo , Programs.PrgNo";
+        // return " ORDER BY  Programs.RoleNo, Programs.SortNo , Programs.PrgNo";
+        // Jacky 1120622 修改為 RoleNo, ModuleNo, SortNo
+        return " ORDER BY  Programs.RoleNo, Programs.ModuleNo , Programs.SortNo";
     }
     /// <summary>
     /// 新增或修改

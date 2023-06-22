@@ -773,7 +773,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SQLs\Insert\insert_Applications.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_CodeDatas.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Companys.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Departments.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Modules.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Programs.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Roles.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Titles.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Users.sql" />
+    <Content Include="App_Data\SQLs\Query\query_sysobjects.sql" />
     <Content Include="bin\ECPay.Payment.Integration.dll" />
     <Content Include="Content\all.css" />
     <Content Include="Content\all.min.css" />
@@ -3024,7 +3033,6 @@
     <Content Include="Views\Shop\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\SQLs\Query\" />
     <Folder Include="Areas\Mis\Data\" />
     <Folder Include="Areas\Mis\Views\Shared\" />
     <Folder Include="Areas\User\Data\" />
