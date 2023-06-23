@@ -1888,6 +1888,7 @@
     <Content Include="Images\Product\11078443\11078443_R4.webp" />
     <Content Include="Areas\Mis\Views\MBASP006_iepb00h\Index.cshtml" />
     <Content Include="Areas\User\Views\UBASP006_iepb00h\Index.cshtml" />
+    <Content Include="Areas\Mis\Views\MBASP006_iepb00h\CreateEdit.cshtml" />
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

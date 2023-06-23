@@ -134,6 +134,8 @@ public class EFGenericRepository<TEntity> : IEFGenericRepository<TEntity>
         string str_message = "";
         try
         {
+            //Jacky 1120624 for test
+            Context.Configuration.ValidateOnSaveEnabled = false;
             Context.SaveChanges();
 
             // 因為Update 單一model需要先關掉validation，因此重新打開
