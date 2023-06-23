@@ -263,6 +263,7 @@
     <Compile Include="Areas\Mis\Controllers\MBASP004_CodeBaseController.cs" />
     <Compile Include="Areas\Mis\Controllers\MBASP004_CodeDataController.cs" />
     <Compile Include="Areas\Mis\Controllers\MBASP005_CompanyController.cs" />
+    <Compile Include="Areas\Mis\Controllers\MBASP006_iepb00hController.cs" />
     <Compile Include="Areas\Mis\Controllers\MCODP001_MetadataController.cs" />
     <Compile Include="Areas\Mis\Controllers\MCODP002_RepositoryController.cs" />
     <Compile Include="Areas\Mis\Controllers\MCODP003_ControllerController.cs" />
@@ -284,7 +285,6 @@
     <Compile Include="Areas\Mis\Controllers\MUSRP002_MisController.cs" />
     <Compile Include="Areas\Mis\MisAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
-    <Compile Include="Areas\User\Controllers\MBASP006_iepb00hController.cs" />
     <Compile Include="Areas\User\Controllers\UBASP001_CodeBaseController.cs" />
     <Compile Include="Areas\User\Controllers\UBASP001_CodeDataController.cs" />
     <Compile Include="Areas\User\Controllers\UBASP002_CityAreaController.cs" />
@@ -292,6 +292,7 @@
     <Compile Include="Areas\User\Controllers\UBASP003_AddressBookController.cs" />
     <Compile Include="Areas\User\Controllers\UBASP004_MapPositionController.cs" />
     <Compile Include="Areas\User\Controllers\UBASP005_TodoListController.cs" />
+    <Compile Include="Areas\User\Controllers\UBASP006_iepb00hController.cs" />
     <Compile Include="Areas\User\Controllers\UHOMP001_AboutUsController.cs" />
     <Compile Include="Areas\User\Controllers\UHOMP002_ClientController.cs" />
     <Compile Include="Areas\User\Controllers\UHOMP003_NewsController.cs" />
@@ -1885,6 +1886,8 @@
     <Content Include="Images\Product\11078443\11078443_R2.webp" />
     <Content Include="Images\Product\11078443\11078443_R3.webp" />
     <Content Include="Images\Product\11078443\11078443_R4.webp" />
+    <Content Include="Areas\Mis\Views\MBASP006_iepb00h\Index.cshtml" />
+    <Content Include="Areas\User\Views\UBASP006_iepb00h\Index.cshtml" />
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>

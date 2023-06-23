@@ -1,7 +1,9 @@
+USE [ORANGE1]
+
 SELECT *
 FROM Programs
 WHERE 1 = 1
-AND PrgNo = 'MBASP006'
+AND PrgNo LIKE '_BASP006'
 ORDER BY RoleNo, ModuleNo, SortNo
 
 /*

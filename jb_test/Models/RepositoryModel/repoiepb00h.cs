@@ -77,7 +77,7 @@ FROM iepb00h
     /// <returns></returns>
     private string GetSQLOrderBy()
     {
-        return " ORDER BY  od_id";
+        return " ORDER BY od_id";
     }
     /// <summary>
     /// 新增或修改
