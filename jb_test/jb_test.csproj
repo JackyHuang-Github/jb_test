@@ -37,6 +37,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES2017</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -780,13 +793,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SQLs\CRUD\iepb00h_CRUD.sql" />
+    <Content Include="App_Data\SQLs\CRUD\Programs_CRUD.sql" />
+    <Content Include="App_Data\SQLs\CRUD\Users_CRUD.sql" />
+    <Content Include="App_Data\SQLs\Insert\import_all_tables_from_NiceAdmin.sql" />
+    <Content Include="App_Data\SQLs\Insert\import_all_views_from_NiceAdmin.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Applications.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_CodeDatas.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Companys.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Departments.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_iepb00h.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_iepb00h_original.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Modules.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Programs.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Roles.sql" />
+    <Content Include="App_Data\SQLs\Insert\insert_Securitys.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Titles.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Users.sql" />
     <Content Include="App_Data\SQLs\Query\query_sysobjects.sql" />
@@ -1889,6 +1910,7 @@
     <Content Include="Areas\Mis\Views\MBASP006_iepb00h\Index.cshtml" />
     <Content Include="Areas\User\Views\UBASP006_iepb00h\Index.cshtml" />
     <Content Include="Areas\Mis\Views\MBASP006_iepb00h\CreateEdit.cshtml" />
+    <Content Include="Areas\User\Views\UBASP006_iepb00h\CreateEdit.cshtml" />
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -2036,7 +2058,6 @@
     <Content Include="Plugins\Shoppers\scss\_site-base.scss" />
     <Content Include="Plugins\Shoppers\scss\_site-blocks.scss" />
     <Content Include="Plugins\Shoppers\scss\_site-navbar.scss" />
-    <None Include="Properties\PublishProfiles\niceadmin - Web Deploy.pubxml" />
     <Content Include="Plugins\Prism\prism.css" />
     <Content Include="Plugins\Prism\prism.js" />
     <Content Include="Plugins\Shoppers\about.html" />
@@ -2092,6 +2113,7 @@
     <Content Include="Plugins\SweetAlert\sweetalert2.js" />
     <Content Include="Plugins\SweetAlert\sweetalert2.min.css" />
     <Content Include="Plugins\SweetAlert\sweetalert2.min.js" />
+    <Content Include="Properties\PublishProfiles\jb_test_local_web_deploy.pubxml.user" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -2911,6 +2933,7 @@
     <Content Include="Scripts\ckeditor\LICENSE.md" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\bender-runner.config.json" />
+    <None Include="Properties\PublishProfiles\jb_test_local_web_deploy.pubxml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\ckeditor\styles.js" />
     <Content Include="Scripts\ckeditor\vendor\promise.js" />
@@ -3148,7 +3171,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1095</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8888/</IISUrl>
+          <IISUrl>http://localhost:9898/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

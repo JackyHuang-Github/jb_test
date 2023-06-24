@@ -79,31 +79,31 @@ namespace jb_test.Areas.User.Controllers
                 if (model == null)
                 {
                         model = new iepb00h();
-//                    // 設定新增預設值
-//                    using (AttributeService attr = new AttributeService())
-//                    {
-//                        model.od_id = (string)attr.GetDefaultValue<z_metaiepb00h>("od_id");
-//                        model.od_name = (string)attr.GetDefaultValue<z_metaiepb00h>("od_name");
-//                        model.od_name1 = (string)attr.GetDefaultValue<z_metaiepb00h>("od_name1");
-//                        model.od_rate = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate");
-//                        model.od_rate1 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate1");
-//                        model.od_rate2 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate2");
-//                        model.od_rate3 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate3");
-//                        model.od_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("od_ymd");
-//                        model.ie_def = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_def");
-//                        model.ie_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ymd");
-//                        model.ie_time = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_time");
-//                        model.ie_user = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_user");
-//                        model.ie_lymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_lymd");
-//                        model.ie_ltime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ltime");
-//                        model.ie_luser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_luser");
-//                        model.ie_cymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cymd");
-//                        model.ie_ctime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ctime");
-//                        model.ie_cuser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cuser");
-//                        model.ie_cancel = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cancel");
-//                        model.od_cu = (string)attr.GetDefaultValue<z_metaiepb00h>("od_cu");
-//                        model.od_id1 = (string)attr.GetDefaultValue<z_metaiepb00h>("od_id1");
-//                    }
+                    //                    // 設定新增預設值
+                    using (AttributeService attr = new AttributeService())
+                    {
+                        model.od_id = (string)attr.GetDefaultValue<z_metaiepb00h>("od_id");
+                        model.od_name = (string)attr.GetDefaultValue<z_metaiepb00h>("od_name");
+                        model.od_name1 = (string)attr.GetDefaultValue<z_metaiepb00h>("od_name1");
+                        model.od_rate = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate");
+                        model.od_rate1 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate1");
+                        model.od_rate2 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate2");
+                        model.od_rate3 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate3");
+                        model.od_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("od_ymd");
+                        model.ie_def = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_def");
+                        model.ie_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ymd");
+                        model.ie_time = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_time");
+                        model.ie_user = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_user");
+                        model.ie_lymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_lymd");
+                        model.ie_ltime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ltime");
+                        model.ie_luser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_luser");
+                        model.ie_cymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cymd");
+                        model.ie_ctime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ctime");
+                        model.ie_cuser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cuser");
+                        model.ie_cancel = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cancel");
+                        model.od_cu = (string)attr.GetDefaultValue<z_metaiepb00h>("od_cu");
+                        model.od_id1 = (string)attr.GetDefaultValue<z_metaiepb00h>("od_id1");
+                    }
                 }
                 return View(model);
             }
@@ -125,6 +125,30 @@ namespace jb_test.Areas.User.Controllers
             }
             using (z_repoiepb00h repos = new z_repoiepb00h())
             {
+                // 設定新增預設值
+                // Jacky 1120624 重新給定預設值，不然會變成將 Null 值寫入欄位，造成錯誤無法寫入。原因不明。
+                using (AttributeService attr = new AttributeService())
+                {
+                    model.od_rate = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate");
+                    model.od_rate1 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate1");
+                    model.od_rate2 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate2");
+                    model.od_rate3 = (decimal)attr.GetDefaultValue<z_metaiepb00h>("od_rate3");
+                    model.od_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("od_ymd");
+                    model.ie_def = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_def");
+                    model.ie_ymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ymd");
+                    model.ie_time = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_time");
+                    model.ie_user = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_user");
+                    model.ie_lymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_lymd");
+                    model.ie_ltime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ltime");
+                    model.ie_luser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_luser");
+                    model.ie_cymd = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cymd");
+                    model.ie_ctime = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_ctime");
+                    model.ie_cuser = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cuser");
+                    model.ie_cancel = (string)attr.GetDefaultValue<z_metaiepb00h>("ie_cancel");
+                    model.od_cu = (string)attr.GetDefaultValue<z_metaiepb00h>("od_cu");
+                    model.od_id1 = (string)attr.GetDefaultValue<z_metaiepb00h>("od_id1");
+                }
+
                 repos.CreateEdit(model);
                 return RedirectToAction(ActionService.Index, ActionService.Controller, new { area = ActionService.Area });
             }
