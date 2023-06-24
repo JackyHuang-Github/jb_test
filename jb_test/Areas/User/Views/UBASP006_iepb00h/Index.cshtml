@@ -9,38 +9,67 @@
     <table class="table table-bordered">
         <tr class="table-secondary">
             <th>
-              @Html.Partial("~/Views/PartialViews/_PartialFormCreate.cshtml")
+                @Html.Partial("~/Views/PartialViews/_PartialFormCreate.cshtml")
             </th>
-            <th>
-              @Html.DisplayNameFor(model => model.od_id)
+            <th class="datatitle">
+                @Html.DisplayNameFor(model => model.od_id)
             </th>
-            <th>
-              @Html.DisplayNameFor(model => model.od_name)
+            <th class="datatitle">
+                @Html.DisplayNameFor(model => model.od_name)
             </th>
-            <th>
-              @Html.DisplayNameFor(model => model.od_name1)
+            <th class="datatitle">
+                @Html.DisplayNameFor(model => model.od_name1)
             </th>
         </tr>
 
-    @foreach(var item in Model)
-    {
-        ActionService.RowId = item.Id;
-        ActionService.RowData = (item.od_id == null) ? "" : $"{item.od_id} ";
-        <tr>
-            <td>
-                @Html.Partial("~/Views/PartialViews/_PartialFormEdit.cshtml")
-                @Html.Partial("~/Views/PartialViews/_PartialFormDelete.cshtml")
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.od_id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.od_name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.od_name1)
-            </td>
-        </tr>
-    }
+        @foreach (var item in Model)
+        {
+            ActionService.RowId = item.Id;
+            ActionService.RowData = (item.od_id == null) ? "" : $"{item.od_id} ";
+            <tr class="datacontent">
+                <td>
+                    @Html.Partial("~/Views/PartialViews/_PartialFormEdit.cshtml")
+                    @Html.Partial("~/Views/PartialViews/_PartialFormDelete.cshtml")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.od_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.od_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.od_name1)
+                </td>
+            </tr>
+        }
     </table>
 </div>
+
+@* Jacky 1120624 欄位標題功能 *@
+<style>
+    .datatitle:hover {
+        cursor: pointer;
+        color: red;
+    }
+</style>
+
+@* Jacky 1120624 欄位標題功能 *@
+<script>
+    $(function () {
+        $("th").click(function () {
+            // 顯示索引值
+            // alert($(this).index());
+
+            // 判斷 index() > 0 是為了要避開最前面的按鈕 [新增]
+            if ($(this).index() > 0) {
+                // 顯示內容
+                alert($(this).text());
+            }
+            else {
+                // 淡入/淡出效果
+                $(".datacontent").fadeToggle(1000, "swing");    // Default Value
+                // $(".datacontent").fadeToggle(1000, "linear");
+            }
+        });
+    });
+</script>
