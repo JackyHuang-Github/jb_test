@@ -811,6 +811,7 @@
     <Content Include="App_Data\SQLs\Insert\insert_Titles.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Users.sql" />
     <Content Include="App_Data\SQLs\Query\query_sysobjects.sql" />
+    <Content Include="App_Data\Web_Config\Web_Config_connectionStrings.txt" />
     <Content Include="bin\ECPay.Payment.Integration.dll" />
     <Content Include="Content\all.css" />
     <Content Include="Content\all.min.css" />
