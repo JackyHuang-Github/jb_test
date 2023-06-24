@@ -48,7 +48,8 @@ public class z_repoiepb00h : BaseClass
     {
         string str_query = @"
 SELECT 
-Id, od_id, od_name, od_name1
+Id, od_id, od_name, od_name1, od_rate, od_rate1, od_rate2, od_rate3, od_ymd, ie_def, ie_ymd, ie_time, ie_user, 
+ie_lymd, ie_ltime, ie_luser, ie_cymd, ie_ctime, ie_cuser, ie_cancel, od_cu, od_id1
 FROM iepb00h 
 ";
         return str_query;

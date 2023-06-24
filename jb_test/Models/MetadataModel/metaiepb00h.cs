@@ -52,11 +52,11 @@ public abstract class z_metaiepb00h
     [Column(CheckBox = false , Hidden = false , DropdownClass = "")]
     [Default(DefaultValueType = enDefaultValueType.Decimal_0, DefaultValue = "")]
     public decimal od_rate3 { get; set; }
-    [Display(Name = "屬性名稱")]
+    [Display(Name = "od_ymd")]
     [Column(CheckBox = false , Hidden = false , DropdownClass = "")]
     [Default(DefaultValueType = enDefaultValueType.String_Space, DefaultValue = "")]
     public string od_ymd { get; set; }
-    [Display(Name = "屬性名稱")]
+    [Display(Name = "ie_def")]
     [Column(CheckBox = false , Hidden = false , DropdownClass = "")]
     [Default(DefaultValueType = enDefaultValueType.String_Space, DefaultValue = "")]
     public string ie_def { get; set; }

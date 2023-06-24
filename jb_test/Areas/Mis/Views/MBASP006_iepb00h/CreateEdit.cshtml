@@ -17,7 +17,7 @@
 <div class="form-horizontal  mt-2">
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.Id)
-    @Html.HiddenFor(model => model.od_rate)
+    @*@Html.HiddenFor(model => model.od_rate)
     @Html.HiddenFor(model => model.od_rate1)
     @Html.HiddenFor(model => model.od_rate2)
     @Html.HiddenFor(model => model.od_rate3)
@@ -34,7 +34,7 @@
     @Html.HiddenFor(model => model.ie_cuser)
     @Html.HiddenFor(model => model.ie_cancel)
     @Html.HiddenFor(model => model.od_cu)
-    @Html.HiddenFor(model => model.od_id1)
+    @Html.HiddenFor(model => model.od_id1)*@
 
     <div class="row form-group">
         <div class="col-md-2">
@@ -63,6 +63,7 @@
             @Html.ValidationMessageFor(model => model.od_name1, "", new { @class = "text-danger" })
         </div>
     </div>
+
     @*<div class="row form-group">
             <div class="col-md-2">
                 @Html.LabelFor(model => model.od_rate, htmlAttributes: new { @class = "control-label" })
