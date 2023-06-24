@@ -27,10 +27,12 @@ public abstract class z_metaiepb00h
     [Display(Name = "幣別名稱")]
     [Required(ErrorMessage = "名稱不可空白!!")]
     [Column(CheckBox = false, Hidden = false, DropdownClass = "")]
+    [MaxLength(20, ErrorMessage = "長度不可超過 20 碼！")]
     [Default(DefaultValueType = enDefaultValueType.String_Space, DefaultValue = "")]
     public string od_name { get; set; }
     [Display(Name = "英文說明")]
     [Column(CheckBox = false, Hidden = false, DropdownClass = "")]
+    [MaxLength(8, ErrorMessage = "長度不可超過 8 碼！")]
     [Default(DefaultValueType = enDefaultValueType.String_Space, DefaultValue = "")]
     public string od_name1 { get; set; }
     [Display(Name = "od_rate1")]
