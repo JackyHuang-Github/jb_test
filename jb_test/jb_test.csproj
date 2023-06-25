@@ -3070,6 +3070,7 @@
     <Content Include="Views\Shop\OrderResult.cshtml" />
     <Content Include="Views\PartialViews\_PartialShopPage.cshtml" />
     <Content Include="Views\Shop\ProductDetail.cshtml" />
+    <Content Include="Views\PartialViews\_PartialFormEffect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Mis\Data\" />
