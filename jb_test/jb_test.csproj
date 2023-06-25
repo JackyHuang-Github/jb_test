@@ -793,10 +793,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DB\jb_test.ldf">
-      <DependentUpon>jb_test.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\DB\jb_test.mdf" />
     <Content Include="App_Data\SQLs\CRUD\iepb00h_CRUD.sql" />
     <Content Include="App_Data\SQLs\CRUD\Programs_CRUD.sql" />
     <Content Include="App_Data\SQLs\CRUD\Users_CRUD.sql" />
@@ -814,6 +810,8 @@
     <Content Include="App_Data\SQLs\Insert\insert_Securitys.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Titles.sql" />
     <Content Include="App_Data\SQLs\Insert\insert_Users.sql" />
+    <Content Include="App_Data\SQLs\Procedure\drop_superfluous_tables.sql" />
+    <Content Include="App_Data\SQLs\Procedure\drop_superfluous_views.sql" />
     <Content Include="App_Data\SQLs\Query\query_sysobjects.sql" />
     <Content Include="App_Data\Web_Config\Web_Config_connectionStrings.txt" />
     <Content Include="bin\ECPay.Payment.Integration.dll" />
