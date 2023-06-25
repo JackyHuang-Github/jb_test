@@ -793,6 +793,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DB\jb_test.ldf">
+      <DependentUpon>jb_test.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\DB\jb_test.mdf" />
     <Content Include="App_Data\SQLs\CRUD\iepb00h_CRUD.sql" />
     <Content Include="App_Data\SQLs\CRUD\Programs_CRUD.sql" />
     <Content Include="App_Data\SQLs\CRUD\Users_CRUD.sql" />
